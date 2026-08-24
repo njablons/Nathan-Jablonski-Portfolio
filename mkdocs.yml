@@ -1,0 +1,28 @@
+site_name: MEGR 2157 Lab – Design Portfolio
+site_description: Lab Design portfolio documentation
+
+theme:
+  name: material
+  palette:
+    primary: red
+  features:
+    - navigation.instant
+    - navigation.tracking
+
+nav:
+  - Home: index.md
+  - About Me: aboutme/index.md
+  - Labs:
+      - Lab-1: Labs/L01/index.md
+      - Lab-2: Labs/L02/index.md
+      - Lab-3: Labs/L03/index.md
+      - Lab-4: Labs/L04/index.md
+      - Lab-5: Labs/L05/index.md
+      - Lab-6: Labs/L06/index.md
+      - Lab-7: Labs/L07/index.md
+      - Lab-8: Labs/L08/index.md
+      - Lab-9: Labs/L09/index.md
+      - Lab-10: Labs/L10/index.md
+      - Lab-11: Labs/L11/index.md
+  - Final Project: 
+      - Final Project: finalproject/index.md

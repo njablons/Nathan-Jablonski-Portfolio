@@ -39,7 +39,14 @@ I commit to documenting every design decision with enough specificity, mathemati
   * Where $\tau$ is shear stress, $\mu$ is fluid dynamic viscosity, and $\frac{dv}{dy}$ is velocity shear rate of the ink around the ball.
   * **Assumption:** Ink behaves as an incompressible Newtonian fluid under steady laminar flow around the rolling ball.
 * **Component Geometry & Function:**
+
+<img width="1000" height="568" alt="Ballpoint-pen-parts" src="https://github.com/user-attachments/assets/3d810323-09ba-492f-be9e-c0d19fb30d48" />
+
+
   1. **Barrel:** Cylindrical housing that provides structural rigidity, protects the ink reservoir, and ergonomic grip surface for force transfer.
+ 
+<img width="800" height="450" alt="extreme-close-up-shot-ball-point-pen-tip-close-up-shot-ball-point-pen-tip-153137990" src="https://github.com/user-attachments/assets/0bf5a35b-8af8-44dd-8b10-5d6cf07412ce" />
+
   2. **Cartridge & Ball Assembly:** Precision brass socket holds a tungsten carbide sphere with defined clearance to allow rotation while preventing ink leakage.
 * **Patent Research:**
   * **Patent:** US Patent #2,400,679 (Milton Reynolds)

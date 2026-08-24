@@ -1,6 +1,6 @@
 # Nathan Jablonski
 
-![Header Image](https://via.placeholder.com/1200x300?text=Engineering+%26+Design+Portfolio)
+![Header Image](IMG_3462.jpeg)
 
 Welcome to my portfolio! I am an engineering student at UNC Charlotte studying design and manufacturing processes. This site showcases my hands-on design projects, technical skills, and engineering documentation.
 

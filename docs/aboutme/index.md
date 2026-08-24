@@ -1,7 +1,6 @@
 # About Me
 
-![Nathan Jablonski Working](https://via.placeholder.com/600x400?text=Photo+of+Nathan)
-
+![Nathan Jablonski Working](IMG_3462.jpeg)
 ## My Story
 My interest in engineering stems from a curiosity about how complex systems work and a passion for hands-on problem solving. As a student at UNC Charlotte, I focus on turning abstract design concepts into functional, real-world solutions.
 

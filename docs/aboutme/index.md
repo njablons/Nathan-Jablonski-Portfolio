@@ -10,4 +10,4 @@ Through coursework and practical labs, I have built experience in design iterati
 
 ## Next Steps
 * Check out my [Portfolio Overview](../portfolio-overview.md) to see my recent work.
-* Reach out via email or connect with me on [LinkedIn](https://linkedin.com).
+* Reach out via email or connect with me on [LinkedIn]([https://linkedin.com](https://www.linkedin.com/in/nathan-jablonski-1b950b366/)).

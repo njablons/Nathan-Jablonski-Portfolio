@@ -51,7 +51,7 @@ I commit to documenting every design decision with enough specificity, mathemati
 ## Part 3: Communicate
 
 ### Professional Introduction
-My name is Nathan Jablonski, and I am a Mechanical Engineering student at UNC Charlotte. My entry into engineering began with a fascination for how mechanical components interact within physical systems to produce controlled motion. Through my coursework and lab training, I am developing expertise in CAD modeling, additive manufacturing (FDM/SLA), and failure analysis. My goal is to become a mechanical design engineer specializing in product design and automated systems, where I can turn complex theoretical concepts into robust physical artifacts.
+My name is Nathan Jablonski, and I am a Mechanical Engineering student at UNC Charlotte. My entry into engineering began with a fascination for how mechanical components interact within physical systems to produce controlled motion. Through my coursework and lab training, I am developing expertise in CAD modeling, additive manufacturing (FDM/SLA), and failure analysis. My goal is to become a design or manufacturing engineer.
 
 ### Defending an Engineering Decision
 To defend an engineering decision means providing empirical data, physical governing models, and documented trade-off analyses that justify why a chosen design path best satisfies performance requirements over alternative solutions. Currently, I understand the theoretical framework behind defending decisions through math and testing, but I am developing the practical skill of thoroughly documenting these trade-offs under real-world constraints.

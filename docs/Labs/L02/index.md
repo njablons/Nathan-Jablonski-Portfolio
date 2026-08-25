@@ -1,13 +1,10 @@
-# A2 – Truss Stress Analysis
+# Lab 2
 
-## Objective
+# Individual Research DFAM:
+45-degree self-supporting angle rule: States that any overhang features printed at an angle shallower than 45 degrees relative to the build plate require added support structures. Following this guideline matters because it prevents print sagging or structural failure while reducing the need for tedious manual support removal during post-processing.
 
+# Individual Research FDM:
+Warping: Extruded plastic cools to fast and shrinks. Designers use fillets, wide brims, or heated print enclosure to slow cooling.
 
-## Analyze
-
-
-## Decide
-_Which geometry did you select, and why? This is your first open design choice in the course — defend it._
-
-## Communicate
-
+# What I learned:
+Layer Adhesion, how well the layers stick together. Each filament has different temperatures that affect adhesion.

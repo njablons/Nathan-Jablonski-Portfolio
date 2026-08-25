@@ -64,12 +64,3 @@ My name is Nathan Jablonski, and I am a Mechanical Engineering student at UNC Ch
 To defend an engineering decision means providing empirical data, physical governing models, and documented trade-off analyses that justify why a chosen design path best satisfies performance requirements over alternative solutions. Currently, I understand the theoretical framework behind defending decisions through math and testing, but I am developing the practical skill of thoroughly documenting these trade-offs under real-world constraints.
 
 * **Time Spent on Assignment:** 3.5 hours
-
- 
-τ
-=
-μ
-d
-v
-d
-y

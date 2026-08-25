@@ -34,7 +34,7 @@ I commit to documenting every design decision with enough specificity, mathemati
 ### Task B: Product Analysis — 2-Piece Ballpoint Pen
 
 * **Primary Engineering Function:** To store, meter, and transfer viscous fluid ink onto a target surface via a rolling sphere driven by shear force and capillary action.
-* **Component Geometry & Function:**
+
 
 <img width="1000" height="568" alt="Ballpoint-pen-parts" src="https://github.com/user-attachments/assets/3d810323-09ba-492f-be9e-c0d19fb30d48" />
 

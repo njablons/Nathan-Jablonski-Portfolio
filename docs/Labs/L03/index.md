@@ -79,13 +79,6 @@ During the production process, adjustments were made to ensure a successful buil
 
 ---
 
-## Communicate
-
-### Video Demonstration
-[Watch 3D Print Operation Video](IMG_3462.jpeg)
-
----
-
 ## Lessons Learned
 
 ### 1. Scaling Decisions to Safety-Critical Applications

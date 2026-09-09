@@ -1,50 +1,47 @@
 # Lab 4: Benchmark a Parameter
 
 ## Objective
-The objective of this lab is to design, slice, print, and evaluate a custom benchmark artifact to determine the physical manufacturing limits of the Prusa Core One 3D printer. By characterizing specific machine constraints, we establish empirical design rules necessary for reliable FDM additive manufacturing.
+The goal of this lab is to test the minimum physical wall thickness limits of the Prusa Core One printer using a simple custom benchmark model and compare the results to standard FDM design rules.
 
 ---
 
 ## Parameter
 
-- **Tested Parameter:** Minimum Wall Thickness and Pin/Hole Tolerance Limits (Wall thicknesses: 0.4mm, 0.8mm, 1.2mm, 1.6mm, 2.0mm; Pin/Hole clearance: 0.1mm, 0.2mm, 0.3mm, 0.4mm).
-- **Hypothesis / Prediction:** I predict that the Prusa Core One (using a 0.4mm nozzle) will reliably produce walls down to 0.8mm (two perimeter passes). The 0.4mm single-wall section is predicted to exhibit fragile layer bonding or slicing gaps. For fit tolerance, I predict a minimum clearance of 0.2mm will be required for a free-moving clearance fit.
+- **Tested Parameter:** Minimum Printable Wall Thickness (0.4mm, 0.8mm, and 1.2mm vertical walls).
+- **Prediction:** I predict that the 0.8mm and 1.2mm walls will print cleanly because they equal 2 and 3 passes of the 0.4mm nozzle. I predict the 0.4mm wall will be weak, flimsy, or fail to slice properly due to single-extrusion limitations.
 
 ---
 
 ## Document Design
 
-### Design Process & Iteration
-To evaluate dimensional limits and wall extrusion constraints, a compact gauge block was modeled in CAD.
+### Design Process
+To keep the benchmark as simple as possible, I designed a basic rectangular block with three vertical steps testing different wall thicknesses.
 
-1. **CAD Modeling:** Modeled a rectangular base plate incorporating vertical test fins with step-increasing wall thicknesses and precision pin/hole pairs.
-2. **Feature Sizing:** Kept overall dimensions compact (45 mm x 30 mm x 15 mm) to ensure the active print time remains under the 1-hour limit.
-3. **Identification Markers:** Embossed dimension values next to each wall and pin feature for clear post-print measurement.
+1. **CAD Sketch:** Drew a basic $30\text{ mm} \times 15\text{ mm}$ base plate in CAD.
+2. **Feature Extrusion:** Extruded three vertical fins on top of the base plate with thicknesses of 0.4mm, 0.8mm, and 1.2mm, all at a height of 10mm.
+3. **Time Constraint Check:** Total artifact dimensions ($30\text{ mm} \times 15\text{ mm} \times 13\text{ mm}$) keep the active print time under 15 minutes, well within the 1-hour limit.
 
-![Dimensional Gauge CAD Model Overview]([IMAGE_PLACEHOLDER_CAD_MODEL_OVERVIEW])
-*Figure 1: CAD model layout of the dimensional tolerance and wall thickness benchmark block.*
+![Simple Wall Thickness CAD Model]([IMAGE_PLACEHOLDER_CAD_MODEL_OVERVIEW])
+*Figure 1: Simple CAD model of the wall thickness benchmark block.*
 
-![Feature Design Iterations]([IMAGE_PLACEHOLDER_CAD_FEATURE_SKETCHES])
-*Figure 2: Initial CAD feature sketches and clearance testing layout.*
+![CAD Dimensions and Features]([IMAGE_PLACEHOLDER_CAD_SKETCH])
+*Figure 2: Dimensioned sketch showing the 0.4mm, 0.8mm, and 1.2mm wall features.*
 
 ---
 
 ## Preprocessor
 
-The STL file was imported into **PrusaSlicer** to configure build parameters suited for fine-feature accuracy testing.
+The model was loaded into **PrusaSlicer** to configure build settings for wall printing.
 
-![PrusaSlicer Toolpath Setup]([IMAGE_PLACEHOLDER_PRUSASLICER_SCREENSHOT])
-*Figure 3: Toolpath preview, layer alignment, and slicing breakdown in PrusaSlicer.*
+![PrusaSlicer Toolpath Preview]([IMAGE_PLACEHOLDER_PRUSASLICER_SCREENSHOT])
+*Figure 3: PrusaSlicer setup showing layer heights and toolpaths.*
 
 ### Build Parameter Justifications
-- **Infill (15% Grid):** Chosen to provide internal stability for top surfaces without affecting thin outer wall perimeters or adding unnecessary print time.
-- **Build Orientation (Flat Base Alignment):** Placed completely flat on its primary base to ensure vertical walls and pins print perpendicular to the build plate for maximum accuracy.
-- **Supports (Disabled):** Supports were set to **None**. Adding supports around precision clearance holes or thin walls would alter dimensions and invalidate the benchmark.
-- **Scaling (100% / Native Scale):** Printed at native 1:1 scale so that nozzle extrusion widths match modeled wall values directly.
-- **Print Metrics:** Estimated print time ~32 minutes; estimated material ~11.2 grams of PLA.
-
-### Process Notes & Adjustments
-- Positioned the model near the center of the bed in PrusaSlicer to benefit from uniform bed temperature and optimal first-layer extrusion.
+- **Infill (15% Grid):** Used for the base plate to save print time and material while maintaining a stable foundation.
+- **Build Orientation (Flat Base):** Oriented flat on the print bed so the test walls extend straight up along the Z-axis for clean layer stacking.
+- **Supports (Disabled):** Set to **None** because adding supports to thin vertical walls would defeat the purpose of testing unsupported extrusion.
+- **Scaling (100% Native Scale):** Kept at 100% scale so that the physical wall measurements match the exact nozzle extrusion width.
+- **Print Metrics:** Estimated time ~12 minutes; estimated material ~4 grams of PLA.
 
 ---
 
@@ -53,31 +50,31 @@ The STL file was imported into **PrusaSlicer** to configure build parameters sui
 ### Execution & Results
 - **Printer Assigned:** UNCC Print Farm – Prusa CORE One
 - **Material Used:** Generic PLA
-- **Test Results:** Thin walls down to 0.8mm printed cleanly with high structural integrity, while the 0.4mm wall showed minor top-edge fragility. The 0.2mm hole clearance allowed smooth pin insertion without binding.
+- **Results:** The 1.2mm and 0.8mm walls printed cleanly with solid structure. The 0.4mm single-perimeter wall printed but was fragile and flexible.
 
-![Completed Benchmark Print]([IMAGE_PLACEHOLDER_PRINTED_ARTIFACT_BED])
-*Figure 4: Completed dimensional calibration print artifact on the build plate.*
+![Printed Benchmark Artifact]([IMAGE_PLACEHOLDER_PRINTED_ARTIFACT_BED])
+*Figure 4: Completed print on the build plate.*
 
-![Detailed Feature View]([IMAGE_PLACEHOLDER_PRINTED_ARTIFACT_CLOSEUP])
-*Figure 5: Close-up inspection of printed pin tolerances and wall thickness steps.*
+![Close-up of Printed Walls]([IMAGE_PLACEHOLDER_PRINTED_ARTIFACT_CLOSEUP])
+*Figure 5: Side view comparing the rigidity and finish of each wall thickness.*
 
-> **Note:** [VIDEO_PLACEHOLDER_ACTIVE_PRINT] A 15-second video recording of the active printing process is embedded for evaluation.
+> **Note:** [VIDEO_PLACEHOLDER_ACTIVE_PRINT] A 15-second video recording of the active print process is embedded.
 
 ---
 
 ## Lessons Learned
 
-1. **Wall Thickness vs. Nozzle Diameter:** The 0.8mm wall printed cleanly because it equals two exact passes of a 0.4mm nozzle. The 0.4mm single perimeter was weak, demonstrating that nominal wall thickness should be designed as multiples of the nozzle diameter.
-2. **Comparison to Design Rules:** Class FDM design rules recommend a minimum wall thickness of 0.8mm and a clearance tolerance of 0.3mm. The Prusa Core One matched the 0.8mm wall rule and exceeded expectation by achieving a tight 0.2mm functional clearance fit.
-3. **Slicer Perimeter Generator Impact:** Using Arachne perimeter generation in PrusaSlicer helps smooth out variable-width features, but physical extrusion limits still govern thin-wall rigidity.
-4. **Future Design Adjustments:** In future CAD designs for moving assemblies, I will use 0.25mm as the standard offset gap for sliding fits and avoid single-extrusion walls below 0.8mm.
+1. **Wall Thickness Match:** My prediction was correct; 0.8mm is the minimum practical wall thickness for functional parts using a 0.4mm nozzle.
+2. **Design Rule Comparison:** Standard FDM design rules recommend a minimum wall thickness of 0.8mm. The Prusa Core One matched this spec exactly.
+3. **Single Perimeter Strength:** Walls printed with only one perimeter pass (0.4mm) lack structural strength because there is no internal bonding between perimeter loops.
+4. **Future Design Standard:** In future CAD designs, I will make all non-structural outer walls at least 0.8mm thick to ensure two perimeter extrusions.
 
 ### Workflow Time
-- **Total Time Elapsed:** ~50 minutes (12 min CAD & Slicing + 32 min Print + 6 min Post-Inspection).
+- **Total Time Elapsed:** ~30 minutes (10 min CAD/Slicing + 12 min Print + 8 min Inspection/Documentation).
 
 ---
 
 ## Resources
 
-- [Prusa CORE One Specifications & User Manual](https://help.prusa3d.com/) – Machine specs and extrusion capabilities.
-- **Class Design Rules for 3D Printing Chart** – Minimum wall thickness and tolerance guidelines for FDM manufacturing.
+- [Prusa CORE One Specifications & User Manual](https://help.prusa3d.com/) – Machine specifications and extrusion recommendations.
+- **Class Design Rules for 3D Printing Chart** – FDM minimum feature and wall thickness guidelines.

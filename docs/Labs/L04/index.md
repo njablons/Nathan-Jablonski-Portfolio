@@ -15,7 +15,7 @@ The goal of this lab is to test the minimum physical wall thickness limits of th
 ## Document Design
 
 ### Design Process
-I designed a basic rectangular block with three vertical steps testing```markdown
+I designed a basic rectangular block with three vertical steps testing
 # Lab 4: Benchmark a Parameter
 
 ## Objective
@@ -90,7 +90,7 @@ The model was loaded into PrusaSlicer to configure build parameters for wall pri
 ### Workflow & Monitoring
 - **Print Process:** Observed the first layer deposition and perimeter extrusion paths during printing to verify bed adhesion and wall consistency.
 - **Post-Print Inspection:** Measured wall rigidity by hand and verified feature dimensions with digital calipers after removing the part from the build plate.
-- **Total Workflow Time:** ~30 minutes total (10 min CAD/Slicing + 8 min Print + 8 min Inspection/Documentation).
+- **Total Workflow Time:** ~26 minutes total (10 min CAD/Slicing + 8 min Print + 8 min Inspection/Documentation).
 
 ---
 
@@ -98,8 +98,3 @@ The model was loaded into PrusaSlicer to configure build parameters for wall pri
 
 - [Prusa CORE One Specifications & User Manual](https://instructure.charlotte.edu/courses/272053/assignments/2900506) – Machine specifications and operational guidelines.
 - **Class Design Rules for 3D Printing Chart** – FDM design recommendations and feature limits.
-
-## Resources
-
-- [Prusa CORE One Specifications & User Manual](https://help.prusa3d.com/) – Machine specifications and extrusion recommendations.
-- **Class Design Rules for 3D Printing Chart** – FDM minimum feature and wall thickness guidelines.

@@ -72,8 +72,6 @@ The downloaded STL file was loaded into **PrusaSlicer** (v2.9.6) to prepare the 
 ![All Printed Items](../../docs/image.png)
 *Figure 4: Complete batch of 3D printed objects printed on the shared build plate.*
 
-> **Note:** Video clip ($\sim 15\text{ seconds}$) of the active print process is embedded/recorded for lab evaluation.
-
 ---
 
 ## Lessons Learned
@@ -89,8 +87,7 @@ Throughout the download, slicing, and printing process, four key technical lesso
 - **Total Time:** ~1 hour 15 minutes (comprising 15 minutes downloading/slicing, 35 minutes active print time, and 25 minutes documentation/post-inspection).
 
 ### Acknowledgments
-- Thanks to my lab partner(s) for coordinating platform space and the UNCC Rapid Lab staff for printer farm maintenance.
-
+- Thanks to my lab partner(s) for coordinating platform space
 ---
 
 ## Resources

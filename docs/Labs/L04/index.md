@@ -18,14 +18,14 @@ The objective of this lab is to design, slice, print, and evaluate a custom benc
 To evaluate dimensional limits and wall extrusion constraints, a compact gauge block was modeled in CAD.
 
 1. **CAD Modeling:** Modeled a rectangular base plate incorporating vertical test fins with step-increasing wall thicknesses and precision pin/hole pairs.
-2. **Feature Sizing:** Kept overall dimensions compact ($45\text{ mm} \times 30\text{ mm} \times 15\text{ mm}$) to ensure the active print time remains under the 1-hour limit.
+2. **Feature Sizing:** Kept overall dimensions compact (45 mm x 30 mm x 15 mm) to ensure the active print time remains under the 1-hour limit.
 3. **Identification Markers:** Embossed dimension values next to each wall and pin feature for clear post-print measurement.
 
-![Dimensional Gauge CAD Model](../../Screenshot%202026-09-01%20134916.png)
+![Dimensional Gauge CAD Model Overview]([IMAGE_PLACEHOLDER_CAD_MODEL_OVERVIEW])
 *Figure 1: CAD model layout of the dimensional tolerance and wall thickness benchmark block.*
 
-![Feature Design Iterations](../../Screenshot%202026-09-01%20140019.png)
-*Figure 2: Initial CAD feature sketches and clearance clearance testing layout.*
+![Feature Design Iterations]([IMAGE_PLACEHOLDER_CAD_FEATURE_SKETCHES])
+*Figure 2: Initial CAD feature sketches and clearance testing layout.*
 
 ---
 
@@ -33,7 +33,7 @@ To evaluate dimensional limits and wall extrusion constraints, a compact gauge b
 
 The STL file was imported into **PrusaSlicer** to configure build parameters suited for fine-feature accuracy testing.
 
-![PrusaSlicer Toolpath Setup](../../Screenshot%202026-08-29%20153924.png)
+![PrusaSlicer Toolpath Setup]([IMAGE_PLACEHOLDER_PRUSASLICER_SCREENSHOT])
 *Figure 3: Toolpath preview, layer alignment, and slicing breakdown in PrusaSlicer.*
 
 ### Build Parameter Justifications
@@ -55,13 +55,13 @@ The STL file was imported into **PrusaSlicer** to configure build parameters sui
 - **Material Used:** Generic PLA
 - **Test Results:** Thin walls down to 0.8mm printed cleanly with high structural integrity, while the 0.4mm wall showed minor top-edge fragility. The 0.2mm hole clearance allowed smooth pin insertion without binding.
 
-![Completed Benchmark Print](../../IMG_3462.jpeg)
+![Completed Benchmark Print]([IMAGE_PLACEHOLDER_PRINTED_ARTIFACT_BED])
 *Figure 4: Completed dimensional calibration print artifact on the build plate.*
 
-![Detailed Feature View](../../IMG_4044.jpeg)
+![Detailed Feature View]([IMAGE_PLACEHOLDER_PRINTED_ARTIFACT_CLOSEUP])
 *Figure 5: Close-up inspection of printed pin tolerances and wall thickness steps.*
 
-> **Note:** A 15-second video recording of the active printing process is embedded for evaluation.
+> **Note:** [VIDEO_PLACEHOLDER_ACTIVE_PRINT] A 15-second video recording of the active printing process is embedded for evaluation.
 
 ---
 

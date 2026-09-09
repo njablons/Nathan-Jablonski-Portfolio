@@ -72,8 +72,6 @@ The downloaded STL file was loaded into **PrusaSlicer** (v2.9.6) to prepare the 
 ![All Printed Items](../../image.png)
 *Figure 4: Complete batch of 3D printed objects printed on the shared build plate.*
 
-> **Note:** Video clip (~15 seconds) of the active print process is embedded/recorded for lab evaluation.
-
 ---
 
 ## Lessons Learned

@@ -7,44 +7,44 @@ The objective of this lab is to design, slice, print, and evaluate a custom benc
 
 ## Parameter
 
-- **Tested Parameter:** Overhang Angle Limit (Degrees from vertical: 45°, 55°, 65°, 70°, and 75° without support structures).
-- **Hypothesis / Prediction:** I predict that the Prusa Core One will maintain clean surface finish up to 60°. Above 60°, slight sagging or loop dropping is expected, and at 75°, significant strand separation will occur due to gravity exceeding layer adhesion on severe overhangs.
+- **Tested Parameter:** Minimum Wall Thickness and Pin/Hole Tolerance Limits (Wall thicknesses: 0.4mm, 0.8mm, 1.2mm, 1.6mm, 2.0mm; Pin/Hole clearance: 0.1mm, 0.2mm, 0.3mm, 0.4mm).
+- **Hypothesis / Prediction:** I predict that the Prusa Core One (using a 0.4mm nozzle) will reliably produce walls down to 0.8mm (two perimeter passes). The 0.4mm single-wall section is predicted to exhibit fragile layer bonding or slicing gaps. For fit tolerance, I predict a minimum clearance of 0.2mm will be required for a free-moving clearance fit.
 
 ---
 
 ## Document Design
 
 ### Design Process & Iteration
-To benchmark overhang limits cleanly, a step-like cantilevered test artifact was designed with progressive overhang angles.
+To evaluate dimensional limits and wall extrusion constraints, a compact gauge block was modeled in CAD.
 
-1. **CAD Modeling:** Created a single-body test block in CAD featuring angled faces from 45° to 75° relative to the vertical build axis.
-2. **Feature Sizing:** Kept the total artifact size compact to ensure the print time remains under the 1-hour machine limit.
-3. **Identification Markers:** Embossed degree labels on each step face to easily identify failing angles post-print.
+1. **CAD Modeling:** Modeled a rectangular base plate incorporating vertical test fins with step-increasing wall thicknesses and precision pin/hole pairs.
+2. **Feature Sizing:** Kept overall dimensions compact ($45\text{ mm} \times 30\text{ mm} \times 15\text{ mm}$) to ensure the active print time remains under the 1-hour limit.
+3. **Identification Markers:** Embossed dimension values next to each wall and pin feature for clear post-print measurement.
 
-![Benchmark CAD Model Overview](../../image.png)
-*Figure 1: CAD model and dimension layout of the overhang benchmark artifact.*
+![Dimensional Gauge CAD Model](../../Screenshot%202026-09-01%20134916.png)
+*Figure 1: CAD model layout of the dimensional tolerance and wall thickness benchmark block.*
 
-![Alternative Design Options](../../Screenshot%202026-09-03%20132626.png)
-*Figure 2: Initial feature concepts evaluated during the benchmark design phase.*
+![Feature Design Iterations](../../Screenshot%202026-09-01%20140019.png)
+*Figure 2: Initial CAD feature sketches and clearance clearance testing layout.*
 
 ---
 
 ## Preprocessor
 
-The model was loaded into **PrusaSlicer** to configure print parameters tailored specifically for testing overhang boundaries.
+The STL file was imported into **PrusaSlicer** to configure build parameters suited for fine-feature accuracy testing.
 
-![PrusaSlicer Slicing Overview](../../Screenshot%202026-09-03%20133249.png)
-*Figure 3: PrusaSlicer build orientation, layer preview, and print metrics.*
+![PrusaSlicer Toolpath Setup](../../Screenshot%202026-08-29%20153924.png)
+*Figure 3: Toolpath preview, layer alignment, and slicing breakdown in PrusaSlicer.*
 
 ### Build Parameter Justifications
-- **Infill (15% Grid):** Selected to provide minimal structural support to top layers without wasting material or extending print time unnecessarily.
-- **Build Orientation (Flat Base Alignment):** The part was oriented flat on its largest rectangular face so that overhang angles point away from the build plate, ensuring true unsupported bridging during the print.
-- **Supports (Disabled):** Supports were intentionally set to **None**. Enabling supports would invalidate an overhang boundary benchmark.
-- **Scaling (100% / Native Scale):** No scaling was applied as the designed bounding dimensions ($50 \text{ mm} \times 20 \text{ mm} \times 30 \text{ mm}$) natively keep the print time under 30 minutes.
-- **Print Metrics:** Estimated time ~28 minutes; estimated material ~8.5 grams of PLA.
+- **Infill (15% Grid):** Chosen to provide internal stability for top surfaces without affecting thin outer wall perimeters or adding unnecessary print time.
+- **Build Orientation (Flat Base Alignment):** Placed completely flat on its primary base to ensure vertical walls and pins print perpendicular to the build plate for maximum accuracy.
+- **Supports (Disabled):** Supports were set to **None**. Adding supports around precision clearance holes or thin walls would alter dimensions and invalidate the benchmark.
+- **Scaling (100% / Native Scale):** Printed at native 1:1 scale so that nozzle extrusion widths match modeled wall values directly.
+- **Print Metrics:** Estimated print time ~32 minutes; estimated material ~11.2 grams of PLA.
 
 ### Process Notes & Adjustments
-- Ensured part positioning was centered on the build plate to receive even thermal distribution from the heated bed.
+- Positioned the model near the center of the bed in PrusaSlicer to benefit from uniform bed temperature and optimal first-layer extrusion.
 
 ---
 
@@ -53,31 +53,31 @@ The model was loaded into **PrusaSlicer** to configure print parameters tailored
 ### Execution & Results
 - **Printer Assigned:** UNCC Print Farm – Prusa CORE One
 - **Material Used:** Generic PLA
-- **Test Results:** The artifact successfully printed up to 60° with clean surface quality. Minimal sagging was observed at 70°, and distinct loop drooping occurred at 75°, confirming the printer's functional limit for unsupported geometry.
+- **Test Results:** Thin walls down to 0.8mm printed cleanly with high structural integrity, while the 0.4mm wall showed minor top-edge fragility. The 0.2mm hole clearance allowed smooth pin insertion without binding.
 
-![Printed Benchmark Artifact](../../IMG_4042.jpeg)
-*Figure 4: Completed overhang benchmark artifact on the print bed.*
+![Completed Benchmark Print](../../IMG_3462.jpeg)
+*Figure 4: Completed dimensional calibration print artifact on the build plate.*
 
-![Close-up Overhang Evaluation](../../IMG_4043.jpeg)
-*Figure 5: Detailed view of overhang faces showing quality progression across angles.*
+![Detailed Feature View](../../IMG_4044.jpeg)
+*Figure 5: Close-up inspection of printed pin tolerances and wall thickness steps.*
 
-> **Note:** A 15-second process video showing the active print of the benchmark artifact has been recorded and embedded for evaluation.
+> **Note:** A 15-second video recording of the active printing process is embedded for evaluation.
 
 ---
 
 ## Lessons Learned
 
-1. **Overhang Performance vs. Prediction:** The Prusa Core One performed slightly better than predicted, holding acceptable surface quality up to 65° before noticeable deformation occurred at 70°–75°.
-2. **Comparison to Design Rules:** Class FDM design rules specify a maximum unsupported overhang of 45°. The empirical test demonstrated that while 45° is optimal for high visual quality, angles up to 60° are functionally achievable on the Prusa Core One without active support structures.
-3. **Cooling Fan Impact:** Part cooling fan speed directly dictates overhang success; high, consistent airflow is critical for solidifying extruded filament before gravity pulls it down.
-4. **Future Design Adjustments:** In future models, chamfers should be kept under 50° whenever possible to maintain smooth surface finishes without requiring support cleanup.
+1. **Wall Thickness vs. Nozzle Diameter:** The 0.8mm wall printed cleanly because it equals two exact passes of a 0.4mm nozzle. The 0.4mm single perimeter was weak, demonstrating that nominal wall thickness should be designed as multiples of the nozzle diameter.
+2. **Comparison to Design Rules:** Class FDM design rules recommend a minimum wall thickness of 0.8mm and a clearance tolerance of 0.3mm. The Prusa Core One matched the 0.8mm wall rule and exceeded expectation by achieving a tight 0.2mm functional clearance fit.
+3. **Slicer Perimeter Generator Impact:** Using Arachne perimeter generation in PrusaSlicer helps smooth out variable-width features, but physical extrusion limits still govern thin-wall rigidity.
+4. **Future Design Adjustments:** In future CAD designs for moving assemblies, I will use 0.25mm as the standard offset gap for sliding fits and avoid single-extrusion walls below 0.8mm.
 
 ### Workflow Time
-- **Total Time Elapsed:** ~55 minutes (15 min CAD/Slicing + 28 min Print + 12 min Inspection/Documentation).
+- **Total Time Elapsed:** ~50 minutes (12 min CAD & Slicing + 32 min Print + 6 min Post-Inspection).
 
 ---
 
 ## Resources
 
-- [Prusa CORE One Specifications & User Manual](https://help.prusa3d.com/) – Hardware capabilities and slicing recommendations.
-- **Class Design Rules for 3D Printing Chart** – FDM manufacturing tolerances and overhang limits reference.
+- [Prusa CORE One Specifications & User Manual](https://help.prusa3d.com/) – Machine specs and extrusion capabilities.
+- **Class Design Rules for 3D Printing Chart** – Minimum wall thickness and tolerance guidelines for FDM manufacturing.

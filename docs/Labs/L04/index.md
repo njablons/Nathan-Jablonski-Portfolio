@@ -21,7 +21,7 @@ To keep the benchmark as simple as possible, a basic rectangular block was desig
 2. **Feature Extrusion:** Extruded three vertical fins on top of the base plate with thicknesses of 0.4 mm, 0.8 mm, and 1.2 mm at a height of 10 mm.
 3. **Time Constraint Check:** Total artifact dimensions (30 mm by 15 mm by 13 mm) maintain an active print time under 15 minutes (~8 minutes actual print time), well within the 1-hour limit.
 
-![Final CAD model in Creo Parametric](./Screenshot%202026-09-09%20164044.png)
+![Final CAD model in Creo Parametric](../../Screenshot%202026-09-09%20164044.png)
 *Figure 1: Final CAD model in Creo Parametric of the wall thickness benchmark block.*
 
 ---
@@ -32,10 +32,10 @@ The STL model was imported into PrusaSlicer to configure build parameters for wa
 
 Initial import issues occurred because the CAD model exported in inches while PrusaSlicer defaulted to millimeters, making the part appear massive on the build plate. Rescaling and adjusting units resolved this issue.
 
-![PrusaSlicer Oversized Unit Import Issue](./Screenshot%202026-09-09%20164059.png)
+![PrusaSlicer Oversized Unit Import Issue](../../Screenshot%202026-09-09%20164059.png)
 *Figure 2: Model initially loaded into PrusaSlicer oversized due to an inch-to-millimeter unit mismatch.*
 
-![PrusaSlicer Settings and Rescaled Model](./Screenshot%202026-09-09%20164435.png)
+![PrusaSlicer Settings and Rescaled Model](../../Screenshot%202026-09-09%20164435.png)
 *Figure 3: Rescaled model (3.94% scale factor adjustment) displaying 15% infill setting and correct 30 mm x 15 mm x 13 mm bounding box.*
 
 ### Build Parameter Justifications
@@ -54,15 +54,15 @@ Initial import issues occurred because the CAD model exported in inches while Pr
 - **Material Used:** Generic PLA
 - **Results:** The 1.2 mm and 0.8 mm walls printed cleanly with rigid structure, matching CAD target measurements accurately. The 0.4 mm single-perimeter wall printed successfully but displayed noticeable flexibility and low structural rigidity.
 
-![Prusa CORE One Printer PC_06](./IMG_4064.jpeg)
+![Prusa CORE One Printer PC_06](../../IMG_4064.jpeg)
 *Figure 4: Prusa CORE One printer (PC_06) during operation.*
 
-![Completed Printed Benchmark Artifact](./IMG_4065.jpeg)
+![Completed Printed Benchmark Artifact](../../IMG_4065.jpeg)
 *Figure 5: Final printed benchmark artifact showing the three wall thickness features.*
 
 <video controls width="100%">
-  <source src="./IMG_4063.mov" type="video/mp4">
-  <source src="./IMG_4063.mov" type="video/quicktime">
+  <source src="../../IMG_4063.mov" type="video/mp4">
+  <source src="../../IMG_4063.mov" type="video/quicktime">
   Your browser does not support the video tag.
 </video>
 *Video 1: 15-second recording of the Prusa CORE One actively printing the benchmark model.*
@@ -85,5 +85,5 @@ Initial import issues occurred because the CAD model exported in inches while Pr
 
 ## Resources
 
-- [Prusa CORE One Specifications & User Manual](https://help.prusa3d.com/) – Machine specifications and operational guidelines.
+- [Prusa CORE One Specifications & User Manual](https://instructure.charlotte.edu/courses/272053/assignments/2900506?module_item_id=7944805) – Machine specifications and operational guidelines.
 - **3D Printing Design Rules (PL_3DP_Design_Rules_EN.pdf)** – FDM design recommendations and feature limits.

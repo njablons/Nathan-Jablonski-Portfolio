@@ -65,7 +65,7 @@ Initial import issues occurred because the CAD model exported in inches while Pr
   <source src="../../IMG_4063.mov" type="video/quicktime">
   Your browser does not support the video tag.
 </video>
-*Video 1: 8-second recording of the Prusa CORE One actively printing the benchmark model.*
+*Video 1: 9-second recording of the Prusa CORE One actively printing the benchmark model.*
 
 ---
 

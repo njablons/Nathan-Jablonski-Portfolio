@@ -1,4 +1,4 @@
-# Lab #5: Design a Snap Fit
+# ab #5: Design a Snap Fit
 
 ## Design
 The objective of this lab was to parametrically design, 3D print, and physically test a two-part snap-fit flexure assembly consisting of a cantilever male clip and a female receiving housing block. 

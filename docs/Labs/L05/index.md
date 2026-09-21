@@ -3,7 +3,7 @@
 ## Design
 The objective of this lab was to parametrically design, 3D print, and physically test a two-part snap-fit flexure assembly consisting of a cantilever male clip and a female receiving housing block. 
 
-To achieve elastic deformation without permanent yielding, the flexure beam was designed with a $0.015\text{ in}$ clearance allowance. Sharp internal corners were rounded with fillets at the flexure root to minimize stress concentrations during bending.
+To achieve elastic deformation without permanent yielding, the flexure beam was designed with a 0.015 in clearance allowance. Sharp internal corners were rounded with fillets at the flexure root to minimize stress concentrations during bending.
 
 ---
 
@@ -18,17 +18,17 @@ For this flexure assembly, **Orientation A** (laying flat on the print bed) was 
 
 ### Material & Safety Parameters
 * **Material:** PLA
-* **Young's Modulus ($E$):** $\approx 3.5\text{ GPa} \ (507,632\text{ psi})$
-* **Yield Strength ($\sigma_y$):** $\approx 60\text{ MPa} \ (8,702\text{ psi})$
-* **Safety Factor ($\text{SF}$):** $3.5$
-* **Allowable Stress ($\sigma_{\text{allow}}$):** $\frac{\sigma_y}{3.5} \approx 2,486\text{ psi}$
+* **Young's Modulus (E):** ~3.5 GPa (507,632 psi)
+* **Yield Strength (σ_y):** ~60 MPa (8,702 psi)
+* **Safety Factor (SF):** 3.5
+* **Allowable Stress (σ_allow):** σ_y / 3.5 = 2,486 psi
 
 ### Load & Stress Calculations
-1. **Transverse Load ($P$):** Selected at $1.5\text{ lbf}$ applied at the free end.
-2. **Beam Length ($L$):** Solved using the cantilever deflection formula $\delta = \frac{P L^3}{3 E I}$ for target deflection equal to lip height.
-3. **Bending Stress ($\sigma_b$):** Calculated at the flexure root base using $\sigma = \frac{M c}{I}$. Verified that $\sigma_b < \sigma_{\text{allow}}$.
-4. **Axial Stress ($\sigma_a$):** Calculated for an axial push/pull force between $5\text{ lbf} - 10\text{ lbf}$ using $\sigma_a = \frac{F}{A}$.
-5. **Shear Stress ($\tau$):** Solved for average shear stress across the engagement lip protrusion $\tau = \frac{V}{A_{\text{lip}}}$.
+1. **Transverse Load (P):** Selected at 1.5 lbf applied at the free end.
+2. **Beam Length (L):** Solved using the cantilever deflection formula **δ = (P * L³) / (3 * E * I)** for target deflection equal to lip height.
+3. **Bending Stress (σ_b):** Calculated at the flexure root base using **σ = (M * c) / I**. Verified that σ_b < σ_allow.
+4. **Axial Stress (σ_a):** Calculated for an axial push/pull force between 5 lbf - 10 lbf using **σ_a = F / A**.
+5. **Shear Stress (τ):** Solved for average shear stress across the engagement lip protrusion **τ = V / A_lip**.
 
 ---
 
@@ -46,14 +46,14 @@ For this flexure assembly, **Orientation A** (laying flat on the print bed) was 
 These parameters allowed instant control over clearance allowances, beam flexure flexibility, and lock engagement without breaking overall model constraints.
 
 ### 3. Assigned Values
-* `Slot_W`: $0.500\text{ in}$
-* `Slot_H`: $0.250\text{ in}$
-* `L`: $1.500\text{ in}$
-* `t`: $0.125\text{ in}$ ($3.175\text{ mm}$)
-* `h_lip`: $0.040\text{ in}$
+* `Slot_W`: 0.500 in
+* `Slot_H`: 0.250 in
+* `L`: 1.500 in
+* `t`: 0.125 in (3.175 mm)
+* `h_lip`: 0.040 in
 
 ### 4. Process Iterations
-Initial clearance allowances were maintained at $0.015\text{ in}$. Values remained constant in CAD prior to 3D printing.
+Initial clearance allowances were maintained at 0.015 in. Values remained constant in CAD prior to 3D printing.
 
 ### 5. CAD Model Progression
 ![Male Model Parameters](Screenshot%202026-09-16%20190658.png)
@@ -69,7 +69,7 @@ Initial clearance allowances were maintained at $0.015\text{ in}$. Values remain
 *Figure 4: Parameter configuration table for the female block.*
 
 ### 6. Tolerance Decision-Making Process
-A nominal clearance allowance of $0.015\text{ in}$ was engineered between the male slider beam and female channel to accommodate standard FDM nozzle extrusion width variances.
+A nominal clearance allowance of 0.015 in was engineered between the male slider beam and female channel to accommodate standard FDM nozzle extrusion width variances.
 
 ### 7. Final CAD Assembly
 ![Final Assembly CAD](Screenshot%202026-09-16%20193157.png)
@@ -80,13 +80,13 @@ A nominal clearance allowance of $0.015\text{ in}$ was engineered between the ma
 ## 3D Printing & Test
 
 ### Pre-Processor Layout & Build Orientation
-Both parts were placed flat on their side face on the print bed in PrusaSlicer. This layout minimizes $Z$-height, drastically reducing print time while aligning extrusion paths parallel to bending forces.
+Both parts were placed flat on their side face on the print bed in PrusaSlicer. This layout minimizes Z-height, drastically reducing print time while aligning extrusion paths parallel to bending forces.
 
 ![PrusaSlicer Layout](Screenshot%202026-09-20%20134115.png)
 *Figure 6: Male clip and female block positioned flat on the print bed in PrusaSlicer.*
 
 ### Slicer Configuration & Settings
-* **Perimeters:** Set to **4** (*Vertical shells*). Because the cantilever beam thickness is $3.175\text{ mm}$, setting 4 perimeters converted the flexure into 100% continuous longitudinal wall paths for maximum fatigue resistance.
+* **Perimeters:** Set to **4** (*Vertical shells*). Because the cantilever beam thickness is 3.175 mm, setting 4 perimeters converted the flexure into 100% continuous longitudinal wall paths for maximum fatigue resistance.
 * **Infill:** Set to **25%** density with a **Gyroid** pattern for structural efficiency in the female block.
 * **Supports:** Set to **For support enforcers only** with **Snug** support style to fulfill the lab requirement while keeping contact surfaces clean.
 
@@ -126,5 +126,5 @@ Once driven into position, the locking lip fully engaged inside the internal fem
 *Figure 14: Assembled snap fit from Angle 2 showing locked retention.*
 
 ### Lessons Learned & Future Iterations
-1. **FDM Tolerance Expansion:** Engineered CAD clearances of $0.015\text{ in}$ shrink significantly during printing due to plastic squish. In future iterations, expanding nominal clearance to $0.020\text{ in}\text{--}0.025\text{ in}$ or applying a $-0.1\text{ mm}$ XY Size Compensation in PrusaSlicer will allow smooth hand insertion.
+1. **FDM Tolerance Expansion:** Engineered CAD clearances of 0.015 in shrink significantly during printing due to plastic squish. In future iterations, expanding nominal clearance to 0.020 in - 0.025 in or applying a -0.1 mm XY Size Compensation in PrusaSlicer will allow smooth hand insertion.
 2. **Structural Orientation Success:** Horizontal layer orientation proved 100% effective. Despite requiring heavy impact force to drive the clip home, the continuous longitudinal perimeters prevented flexure fracture.

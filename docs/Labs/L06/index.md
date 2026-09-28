@@ -1,14 +1,14 @@
 # Lab #6 Design Fits for an artifact
 
 ## Objective
-Design and 3D print a small parametric snap-fit component in PLA that securely attaches to a feature on the yellow motor mount artifact. The design utilizes parameters, constraints, and engineered allowances in Creo Parametric, followed by proper slicer configuration in PrusaSlicer and physical verification on the artifact.
+Design and 3D print a small parametric snap-fit component in PLA that securely attaches to a feature on the yellow artifact. The design utilizes parameters, constraints, and engineered allowances in Creo Parametric, followed by proper slicer configuration in PrusaSlicer and physical verification on the artifact.
 
 ---
 
 ## Parametrically Design
 
 ### Research & Feature Measurement
-Key dimensions were measured directly from the yellow motor mount artifact using digital calipers to establish the baseline parameters and tolerances for a proper fit.
+Key dimensions were measured directly from the yellow artifact using digital calipers to establish the baseline parameters and tolerances for a proper fit.
 
 * **Artifact Top View:** Shows the rectangular entry cavity and top housing structure.
   

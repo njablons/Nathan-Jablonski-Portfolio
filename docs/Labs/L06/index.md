@@ -58,7 +58,7 @@ The part was parametrically modeled in Creo Parametric using user-defined parame
    * `Lip_Overhang`: Tooth protrusion distance ($0.063\text{ in}$).
    * `Fit_Clearance`: Engineered tolerance gap ($0.010\text{ in}$).
 2. **Why were these specific parameters chosen?**
-   * They capture the functional mating geometry of the yellow motor mount artifact while enabling the dual cantilever arms to flex inward upon insertion and expand outward into the side locking windows.
+   * They capture the functional mating geometry of the yellow artifact while enabling the dual cantilever arms to flex inward upon insertion and expand outward into the side locking windows.
 3. **What values were chosen for the parameters?**
    * `Slot_W = 0.592 in`, `Part_Y = 0.125 in`, `Arm_T = 0.080 in`, `Arm_H = 0.750 in`, `Lip_Height = 0.063 in`, `Lip_Overhang = 0.063 in`.
 4. **Did the values change throughout the process? If so, why?**
@@ -106,9 +106,9 @@ The CAD geometry was exported as an STL and configured in PrusaSlicer for printi
 
 ## Show and Tell
 
-*(Insert photos of the physical 3D printed PLA part snap-fitted onto the yellow motor mount artifact after printing)*
+*(Insert photos of the physical 3D printed PLA part snap-fitted onto the yellow artifact after printing)*
 
-The printed part was verified on the yellow motor mount artifact feature during class. The lead chamfers guided the arms inward smoothly through the top slot, and the locking lips snapped firmly into the side window openings under light hand tension.
+The printed part was verified on the yellow artifact feature during class. The lead chamfers guided the arms inward smoothly through the top slot, and the locking lips snapped firmly into the side window openings under light hand tension.
 
 ---
 

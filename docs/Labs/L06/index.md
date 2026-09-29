@@ -16,14 +16,14 @@ Key dimensions were measured directly from the yellow artifact using digital cal
 * **Artifact Frontal View:** Displays the front-facing entry profile and side window location.  
   ![Front View of Yellow Artifact](IMG_4107.jpeg)
 
-* **Slot Width Measurement (`Slot_W`):** Digital calipers measuring the main slot width ($0.592\text{ in}$).  
+* **Slot Width Measurement (`Slot_W`):** Digital calipers measuring the main slot width (0.592 in).  
   ![Digital Caliper Measuring Slot Width](IMG_4108.jpeg)
 
 * **Side Window Latch Feature:** Detailed view of the narrow rectangular side hole where the locking lip must enter to catch and lock.  
   ![Side Window Latch Feature](IMG_4120.jpeg)
 
 ### Hand Sketch & Feature Layout
-An isometric hand sketch was created to outline the male snap-fit part, noting key parameters including `Slot_W = 0.592"` and `Lip_Height = 0.063"`.
+An isometric hand sketch was created to outline the male snap-fit part, noting key parameters including Slot_W = 0.592" and Lip_Height = 0.063".
 
 ![Hand Sketch of Feature and Dimensions](IMG_4121.jpeg)
 
@@ -33,35 +33,35 @@ The part was parametrically modeled in Creo Parametric using user-defined parame
 * **Creo Parameters Table:** Displays the defined variables, types, and values used to drive the part geometry.  
   ![Creo Parameters Table](Screenshot%202026-09-28%20130628.png)
 
-* **Initial CAD Concept:** Early CAD stage displaying full $0.350\text{ in}$ depth prior to adjusting for the side window.  
+* **Initial CAD Concept:** Early CAD stage displaying full 0.350 in depth prior to adjusting for the side window.  
   ![Initial CAD Model Concept](Screenshot%202026-09-28%20121045.png)
 
-* **Final Optimized CAD Part:** Final shortened geometry ($0.125\text{ in}$ depth) ensuring the locking lips align directly with the narrow side window slots.  
+* **Final Optimized CAD Part:** Final shortened geometry (0.125 in depth) ensuring the locking lips align directly with the narrow side window slots.  
   ![Final Creo CAD Model](Screenshot%202026-09-28%20122557.png)
 
 ### Design & Parameter Analysis
 1. **What parameters were used?**
-   * `Slot_W`: Measured main slot width ($0.592\text{ in}$).
-   * `Flange_W`: Total width of the base stop block ($0.700\text{ in}$).
-   * `Flange_H`: Height of the base stop block ($0.300\text{ in}$).
-   * `Part_Y`: Depth of the part along the $Y$-axis ($0.125\text{ in}$).
-   * `Arm_H`: Height of the vertical cantilever flexure arms ($0.750\text{ in}$).
-   * `Arm_T`: Flexure arm wall thickness ($0.080\text{ in}$).
-   * `Lip_Height`: Height of the latch tooth ($0.063\text{ in}$).
-   * `Lip_Overhang`: Tooth protrusion distance ($0.063\text{ in}$).
-   * `Fit_Clearance`: Engineered tolerance gap ($0.010\text{ in}$).
+   * `Slot_W`: Measured main slot width (0.592 in).
+   * `Flange_W`: Total width of the base stop block (0.700 in).
+   * `Flange_H`: Height of the base stop block (0.300 in).
+   * `Part_Y`: Depth of the part along the Y-axis (0.125 in).
+   * `Arm_H`: Height of the vertical cantilever flexure arms (0.750 in).
+   * `Arm_T`: Flexure arm wall thickness (0.080 in).
+   * `Lip_Height`: Height of the latch tooth (0.063 in).
+   * `Lip_Overhang`: Tooth protrusion distance (0.063 in).
+   * `Fit_Clearance`: Engineered tolerance gap (0.010 in).
 
 2. **Why were these specific parameters chosen?**  
    They capture the functional mating geometry of the yellow artifact while enabling the dual cantilever arms to flex inward upon insertion and expand outward into the side locking windows.
 
 3. **What values were chosen for the parameters?**  
-   `Slot_W = 0.592 in`, `Part_Y = 0.125 in`, `Arm_T = 0.080 in`, `Arm_H = 0.750 in`, `Lip_Height = 0.063 in`, `Lip_Overhang = 0.063 in`.
+   `Slot_W` = 0.592 in, `Part_Y` = 0.125 in, `Arm_T` = 0.080 in, `Arm_H` = 0.750 in, `Lip_Height` = 0.063 in, `Lip_Overhang` = 0.063 in.
 
 4. **Did the values change throughout the process? If so, why?**  
-   Yes. The depth (`Part_Y`) was initially modeled at $0.350\text{ in}$ to match the main opening. However, inspecting the narrow side slot (`IMG_4120.jpeg`) showed that a full-depth lip would bind against the outer frame. The total part depth was shortened to $0.125\text{ in}$ so the locking lips extend across the full width of the arm and slide directly into the window.
+   Yes. The depth (`Part_Y`) was initially modeled at 0.350 in to match the main opening. However, inspecting the narrow side slot (`IMG_4120.jpeg`) showed that a full-depth lip would bind against the outer frame. The total part depth was shortened to 0.125 in so the locking lips extend across the full width of the arm and slide directly into the window.
 
 5. **Engineered Allowances:**  
-   A $0.010\text{ in}$ radial clearance allowance was applied to all mating faces to accommodate FDM PLA extrusion swelling and surface roughness, ensuring smooth mechanical engagement without jamming.
+   A 0.010 in radial clearance allowance was applied to all mating faces to accommodate FDM PLA extrusion swelling and surface roughness, ensuring smooth mechanical engagement without jamming.
 
 ---
 
@@ -86,11 +86,11 @@ The CAD geometry was exported as an STL and configured in PrusaSlicer for printi
 
 ### Technical Printing Specifications
 * **Machine Name:** PC-09
-* **Print Size / Bounding Box:** $0.700\text{ in} \times 0.125\text{ in} \times 1.050\text{ in}$ ($17.78\text{ mm} \times 3.18\text{ mm} \times 26.67\text{ mm}$)
+* **Print Size / Bounding Box:** 0.700 in × 0.125 in × 1.050 in (17.78 mm × 3.18 mm × 26.67 mm)
 * **Build Orientation Rationale:** Positioned flat on its side so extruded filament paths run continuously down the length of the flexure arms. This forces bending stress to act perpendicular to layer lines, preventing layer-cleavage failure.
 * **Supports Used:** None (laying the part flat eliminates all overhangs requiring support).
-* **Wall Thickness / Perimeters:** 3 perimeter wall loops ($1.2\text{ mm}$ solid shell).
-* **Layer Height:** $0.20\text{ mm}$ (Standard Quality).
+* **Wall Thickness / Perimeters:** 3 perimeter wall loops (1.2 mm solid shell).
+* **Layer Height:** 0.20 mm (Standard Quality).
 * **Infill Density & Pattern:** 20% Grid Infill.
 
 ---
@@ -106,6 +106,6 @@ The printed part was verified on the yellow artifact feature during class. The l
 ## Lessons Learned
 
 1. **Layer Line Alignment Prevents Flexure Failure:** Cantilever arms printed vertically fail easily along layer boundaries when bent. Printing flat on its side directs stress across continuous extrusions, drastically improving fatigue resistance.
-2. **Feature Alignment Simplifies Design:** Shortening the total depth from $0.350\text{ in}$ to $0.125\text{ in}$ allowed the entire arm to pass through the side window profile without requiring complex step-downs in CAD.
+2. **Feature Alignment Simplifies Design:** Shortening the total depth from 0.350 in to 0.125 in allowed the entire arm to pass through the side window profile without requiring complex step-downs in CAD.
 3. **CAD Units and Slicer Import:** Slicers default to millimeters, so exported inch-based STLs must be double-checked during slicing to ensure accurate 1:1 physical dimensions.
 4. **Total Process Time & Resources:** Total project time was roughly 2.5 hours, including 1 hour for measurement/CAD modeling, 15 minutes for slicer setup, and 15 minutes for print execution on PLA material.

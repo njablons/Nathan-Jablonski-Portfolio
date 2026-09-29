@@ -10,20 +10,16 @@ Design and 3D print a small parametric snap-fit component in PLA that securely a
 ### Research & Feature Measurement
 Key dimensions were measured directly from the yellow artifact using digital calipers to establish the baseline parameters and tolerances for a proper fit.
 
-* **Artifact Top View:** Shows the rectangular entry cavity and top housing structure.
-  
+* **Artifact Top View:** Shows the rectangular entry cavity and top housing structure.  
   ![Top View of Yellow Artifact](IMG_4106.jpeg)
 
-* **Artifact Frontal View:** Displays the front-facing entry profile and side window location.
-  
+* **Artifact Frontal View:** Displays the front-facing entry profile and side window location.  
   ![Front View of Yellow Artifact](IMG_4107.jpeg)
 
-* **Slot Width Measurement (`Slot_W`):** Digital calipers measuring the main slot width ($0.592\text{ in}$).
-  
+* **Slot Width Measurement (`Slot_W`):** Digital calipers measuring the main slot width ($0.592\text{ in}$).  
   ![Digital Caliper Measuring Slot Width](IMG_4108.jpeg)
 
-* **Side Window Latch Feature:** Detailed view of the narrow rectangular side hole where the locking lip must enter to catch and lock.
-  
+* **Side Window Latch Feature:** Detailed view of the narrow rectangular side hole where the locking lip must enter to catch and lock.  
   ![Side Window Latch Feature](IMG_4120.jpeg)
 
 ### Hand Sketch & Feature Layout
@@ -34,17 +30,14 @@ An isometric hand sketch was created to outline the male snap-fit part, noting k
 ### Creo CAD Modeling
 The part was parametrically modeled in Creo Parametric using user-defined parameters, geometric constraints, and mathematical relations.
 
-* **Creo Parameters Table:** Displays the defined variables, types, and values used to drive the part geometry.
-  
+* **Creo Parameters Table:** Displays the defined variables, types, and values used to drive the part geometry.  
   ![Creo Parameters Table](Screenshot%202026-09-28%20130628.png)
 
-* **Initial CAD Concept:** Early CAD stage displaying full $0.350\text{ in}$ depth prior to adjusting for the side window.
-  
+* **Initial CAD Concept:** Early CAD stage displaying full $0.350\text{ in}$ depth prior to adjusting for the side window.  
   ![Initial CAD Model Concept](Screenshot%202026-09-28%20121045.png)
 
-* **Final Optimized CAD Part:** Final shortened geometry ($0.125\text{ in}$ depth) ensuring the locking lips align directly with the narrow side window slots.
-  
-  ![Final Creo CAD Model](Screenshot%202026-09-28%20121802.png)
+* **Final Optimized CAD Part:** Final shortened geometry ($0.125\text{ in}$ depth) ensuring the locking lips align directly with the narrow side window slots.  
+  ![Final Creo CAD Model](Screenshot%202026-09-28%20122557.png)
 
 ### Design & Parameter Analysis
 1. **What parameters were used?**
@@ -57,14 +50,18 @@ The part was parametrically modeled in Creo Parametric using user-defined parame
    * `Lip_Height`: Height of the latch tooth ($0.063\text{ in}$).
    * `Lip_Overhang`: Tooth protrusion distance ($0.063\text{ in}$).
    * `Fit_Clearance`: Engineered tolerance gap ($0.010\text{ in}$).
-2. **Why were these specific parameters chosen?**
-   * They capture the functional mating geometry of the yellow artifact while enabling the dual cantilever arms to flex inward upon insertion and expand outward into the side locking windows.
-3. **What values were chosen for the parameters?**
-   * `Slot_W = 0.592 in`, `Part_Y = 0.125 in`, `Arm_T = 0.080 in`, `Arm_H = 0.750 in`, `Lip_Height = 0.063 in`, `Lip_Overhang = 0.063 in`.
-4. **Did the values change throughout the process? If so, why?**
-   * Yes. The depth (`Part_Y`) was initially modeled at $0.350\text{ in}$ to match the main opening. However, inspecting the narrow side slot (`IMG_4120.jpeg`) showed that a full-depth lip would bind against the outer frame. The total part depth was shortened to $0.125\text{ in}$ so the locking lips extend across the full width of the arm and slide directly into the window.
-5. **Engineered Allowances:**
-   * A $0.010\text{ in}$ radial clearance allowance was applied to all mating faces to accommodate FDM PLA extrusion swelling and surface roughness, ensuring smooth mechanical engagement without jamming.
+
+2. **Why were these specific parameters chosen?**  
+   They capture the functional mating geometry of the yellow artifact while enabling the dual cantilever arms to flex inward upon insertion and expand outward into the side locking windows.
+
+3. **What values were chosen for the parameters?**  
+   `Slot_W = 0.592 in`, `Part_Y = 0.125 in`, `Arm_T = 0.080 in`, `Arm_H = 0.750 in`, `Lip_Height = 0.063 in`, `Lip_Overhang = 0.063 in`.
+
+4. **Did the values change throughout the process? If so, why?**  
+   Yes. The depth (`Part_Y`) was initially modeled at $0.350\text{ in}$ to match the main opening. However, inspecting the narrow side slot (`IMG_4120.jpeg`) showed that a full-depth lip would bind against the outer frame. The total part depth was shortened to $0.125\text{ in}$ so the locking lips extend across the full width of the arm and slide directly into the window.
+
+5. **Engineered Allowances:**  
+   A $0.010\text{ in}$ radial clearance allowance was applied to all mating faces to accommodate FDM PLA extrusion swelling and surface roughness, ensuring smooth mechanical engagement without jamming.
 
 ---
 
@@ -73,28 +70,22 @@ The part was parametrically modeled in Creo Parametric using user-defined parame
 ### Slicer Setup & Configuration
 The CAD geometry was exported as an STL and configured in PrusaSlicer for printing on a Prusa printer.
 
-* **Bed Layout & Orientation:** Model placed flat on its side on the build plate.
-  
-  ![PrusaSlicer Build Plate Layout](Screenshot%202026-09-28%20122305.png)
+* **Bed Layout & Orientation:** Model placed flat on its side on the build plate.  
+  ![PrusaSlicer Build Plate Layout](Screenshot%202026-09-28%20121802.png)
 
-* **Perimeter Settings:** Increased to 3 wall loops to make the flexible arms nearly solid plastic for maximum bending strength.
-  
-  ![Perimeters Setting - 3 Loops](Screenshot%202026-09-28%20122539.png)
+* **Perimeter Settings:** Configured perimeter loops to enforce strong wall structural integrity across flexure arms.  
+  ![Perimeters Setting](Screenshot%202026-09-28%20122305.png)
 
-* **Infill Settings:** Configured to 20% Infill Density using a Grid pattern.
-  
-  ![Infill Settings - 20% Grid](Screenshot%202026-09-28%20122557.png)
+* **Infill Settings:** Configured infill density and pattern for lightweight rigidity.  
+  ![Infill Settings](Screenshot%202026-09-28%20122539.png)
 
 ### In-Progress Printing Video
-<video width="100%" controls>
-  <source src="printing_video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<video src="IMG_4124.MOV" controls width="100%"></video>
 
-*Note: Short video recorded during active extrusion in the Rapid Lab.*
+*Note: Short video recorded during active extrusion on printer PC-09 in the Rapid Lab.*
 
 ### Technical Printing Specifications
-* **Machine Name:** Prusa Core One
+* **Machine Name:** PC-09
 * **Print Size / Bounding Box:** $0.700\text{ in} \times 0.125\text{ in} \times 1.050\text{ in}$ ($17.78\text{ mm} \times 3.18\text{ mm} \times 26.67\text{ mm}$)
 * **Build Orientation Rationale:** Positioned flat on its side so extruded filament paths run continuously down the length of the flexure arms. This forces bending stress to act perpendicular to layer lines, preventing layer-cleavage failure.
 * **Supports Used:** None (laying the part flat eliminates all overhangs requiring support).
@@ -106,7 +97,7 @@ The CAD geometry was exported as an STL and configured in PrusaSlicer for printi
 
 ## Show and Tell
 
-*(Insert photos of the physical 3D printed PLA part snap-fitted onto the yellow artifact after printing)*
+![Physical Print Snapped onto Artifact](IMG_4127.jpeg)
 
 The printed part was verified on the yellow artifact feature during class. The lead chamfers guided the arms inward smoothly through the top slot, and the locking lips snapped firmly into the side window openings under light hand tension.
 
